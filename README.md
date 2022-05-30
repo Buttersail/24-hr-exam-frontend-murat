@@ -1,2 +1,8 @@
-# 24-hr-exam-frontend-murat
-Frontend for the 24hr exam for KEA
+# 24 Hours Examproject Frontend
+
+## Backend link:
+https://github.com/Buttersail/24-hr-exam-backend-murat
+
+Made by:
+
+Haci Murat Fatih Memis
