@@ -1,6 +1,8 @@
 import { renderTemplate, setActive, showPage } from './utils.js'
-
-import { getCandidates } from './js-for-pages/candidates.js'
+import { setupRiderHandlers } from './js-for-pages/showRiders.js'
+import { setupTeamHandlers } from './js-for-pages/showTeams.js'
+import { setupAddRiderHandler } from './js-for-pages/addRiders.js'
+import { setupAddTeamHandler } from './js-for-pages/addTeam.js'
 
 function renderMenuItems(evt) {
   const element = evt.target
@@ -9,13 +11,25 @@ function renderMenuItems(evt) {
   renderTemplate(id) //This setups the HTML for the page
   switch (id) {
     //Here you can execute JavaScript for the selected page
-    case 'page-candidates': {
-      getCandidates()
+    case 'page-about': {
       break
     }
-    // case "page-add-candidates": {
-
-    // }
+    case 'page-riders': {
+      setupRiderHandlers()
+      break
+    }
+    case 'page-teams': {
+      setupTeamHandlers()
+      break
+    }
+    case 'page-add-rider': {
+      setupAddRiderHandler()
+      break
+    }
+    case 'page-add-team': {
+      setupAddTeamHandler()
+      break
+    }
   }
 }
 

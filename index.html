@@ -12,10 +12,11 @@
 <body>
     <div style="padding:1em;">
         <ul id="menu" class="menu">
-          <li><a id="page-about" href="#">Om Denne Opgave</a></li>
-          <li><a id="page-candidates" href="#">Candidates</a></li>
-          <li><a id="page-add-candidates" href="#">Add/Edit Candidates</a></li>
-          <li><a id="page-parties" href="#">Parties</a></li>
+          <li><a id="page-about" href="#">About this assignment</a></li>
+          <li><a id="page-riders" href="#">Show Riders</a></li>
+          <li><a id="page-add-rider" href="#">Add/Edit Rider</a></li>
+          <li><a id="page-teams" href="#">Show Teams</a></li>
+          <li><a id="page-add-team" href="#">Add/Edit Team</a></li>
         </ul>
       </div>
       <div id="content" style="margin-left:15px;padding-top: 1em;"></div>
@@ -25,18 +26,62 @@
 </html>
 
 <template data-id="page-about">
-    <h2>About</h2>
-  </template>
+    <h2>Short info about this project</h2>
+</template>
 
-  <template data-id="page-candidates">
-    <h2>Candidates</h2>
-    <table class="table">
-        <thead>
-<tr><th>ID</th><th>Name</th><th>Party Letter</th></tr>
-        </thead>
-        <tbody id="tbl-body">
-
-        </tbody>
-
+<template data-id="page-riders">
+  <h2>Riders</h2>
+    <table class="table-riders">
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Team</th></tr>
+      </thead>
+      <tbody id="tbl-body"></tbody>
     </table>
-  </template>
+</template>
+
+<template data-id="page-teams">
+  <h2>Teams</h2>
+  <table class="table-teams">
+    <thread>
+      <tr><th>ID</th><th>Team Name</th><th>Team Letter</th></tr>
+    </thread>
+    <tbody id="tbl-body"></tbody>
+  </table>
+</template>
+
+<template data-id="page-add-rider">
+  <div class="row d-flex justify-content-center">
+    <form class="col-md-6 p-5" style="border-radius: 20px; box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px">
+      <div class="form-row d-flex justify-content-between">
+        <div class="form-group col-md-5">
+          <label for="firstname">Name</label>
+          <input type="text" id="firstname-input" class="form-control" />
+        </div>
+      <br />
+      <div class="form-group col-md-5">
+        <label for="teamname">Team Name</label>
+        <input type="text" id="teamname-input" class="form-control" />
+      </div>
+      <button id="create-rider-btn" class="btn btn-primary mt-3">Create Rider</button>
+    </form>
+  </div>
+</template>
+
+<template data-id="page-add-team">
+  <div class="row d-flex justify-content-center">
+    <form class="col-md-6 p-5" style="border-radius: 20px; box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px">
+      <div class="form-row d-flex justify-content-between">
+        <div class="form-group col-md-5">
+          <label for="teamname">Team Name</label>
+          <input type="text" id="teamname-input" class="form-control" />
+        </div>
+        <div class="form-group col-md-5">
+          <label for="teamletter">Team Letter</label>
+          <input type="text" id="teamletter-input" class="form-control" />
+        </div>
+      </div>
+      <br />
+      <button id="create-team-btn" class="btn btn-primary mt-3">Create Team</button>
+    </form>
+  </div>
+</template>
