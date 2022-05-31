@@ -18,8 +18,24 @@ function showRiders() {
     .then((data) => {
       console.log('Fetch all Riders')
       console.log(data)
-      const rows = data.map((rider) => `<tr><th>${encode(rider.id)}</th><th>${encode(rider.name)}</th></tr>`).join('\n')
+      const rows = data
+        .map(
+          (rider) =>
+            `<tr>
+              <th>${encode(rider.id)}</th>
+              <th>${encode(rider.name)}</th>
+              <th>${encode(rider.age)}</th>
+              <th>${encode(rider.country)}</th>
+              <th>${encode(rider.time)}</th>
+              <th>${encode(rider.mountainPts)}</th>
+              <th>${encode(rider.sprintPts)}</th>
+
+            </tr>`
+        )
+        .join('\n')
 
       document.getElementById('tbl-body').innerHTML = rows
     })
 }
+
+//<th>${encode(rider.team.name)}</th>

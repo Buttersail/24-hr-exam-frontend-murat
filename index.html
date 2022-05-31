@@ -26,14 +26,15 @@
 </html>
 
 <template data-id="page-about">
-    <h2>Short info about this project</h2>
+    <h2>About</h2>
+    This project was done by Haci Murat Fatih Memis // haci0275@stud.kea.dk for KEA
 </template>
 
 <template data-id="page-riders">
   <h2>Riders</h2>
     <table class="table-riders">
       <thead>
-        <tr><th>ID</th><th>Name</th><th>Team</th></tr>
+        <tr><th>ID</th><th>Name</th><th>Age</th><th>Country</th><th>Time</th><th>Mountain Points</th><th>Sprint Points</th><!-- <th>Team</th> --></tr>
       </thead>
       <tbody id="tbl-body"></tbody>
     </table>
@@ -57,12 +58,29 @@
           <label for="firstname">Name</label>
           <input type="text" id="firstname-input" class="form-control" />
         </div>
-      <br />
-      <div class="form-group col-md-5">
-        <label for="teamname">Team Name</label>
-        <input type="text" id="teamname-input" class="form-control" />
+        <div class="form-group col-md-2">
+          <label for="age">Age</label>
+          <input type="number" id="age-input" class="form-control" />
+        </div>
+        <div class="form-group col-md-5">
+          <label for="country">Country</label>
+          <input type="text" id="country-input" class="form-control" />
+        </div> 
       </div>
+      <!-- <div class="form-group col-md-5">
+        <label for="team">Team</label>
+        <input type="text" id="team-input" class="form-control" />
+      </div>  -->
+      <br />
       <button id="create-rider-btn" class="btn btn-primary mt-3">Create Rider</button>
+      <button id="edit-rider-btn" class="btn btn-primary mt-3">Edit Rider(WIP)</button>
+
+
+      <div class="form-group col-md-2">
+        <label for="age">ID</label>
+        <input type="number" id="id-input" class="form-control" />
+      </div>
+      <button id="delete-rider-btn" class="btn btn-primary mt-3">Delete Rider</button>
     </form>
   </div>
 </template>
